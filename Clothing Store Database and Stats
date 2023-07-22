@@ -1,0 +1,26 @@
+Create a clothing store database
+CREATE TABLE clothing_store (id integer primary key, name TEXT, price INTEGER, color TEXT, material TEXT);
+INSERT INTO clothing_store VALUES (1, "tshirt", 5, "blue", "cotton"),
+(2, "tanktop", 3, "pink", "cotton"),
+(3, "shorts", 10, "yellow", "linen"),
+(4, "pants", 20, "white", "silk"),
+(5, "panties", 7, "purple", "silk"),
+(6, "socks", 2, "black", "wool");
+
+Select all data from clothing store database
+SELECT * FROM clothing_store;
+
+Select all data from clothing store database ordered by price from low to high
+SELECT * FROM clothing_store ORDER BY price;
+
+Select name, price, and material from clothing store database ordered by price from low to high
+SELECT name, price, material FROM clothing_store ORDER BY price;
+
+Select the total price of all clothing within the clothing store databaase
+SELECT sum(price) FROM clothing_store;
+
+Select all data from the clothing store database where the price is greater than or equal to 7 dollars ordered from low to high 
+SELECT * FROM clothing_store WHERE price >=7 ORDER BY price;
+
+Select the most inspensive clothing item from the clothing store database 
+SELECT max(price) FROM clothing_store
